@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DOWN – FAQ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pink:#ff2db2;
+  --purple:#7b2cff;
+  --bg:#050507;
+  --card1:#1c1c2a;
+  --card2:#0f0f16;
+  --text:#cfd0e6;
+  --border:rgba(255,255,255,.07);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:#fff;
+}
+
+/* ================= FAQ SECTION ================= */
+.faq{
+  min-height:100vh;
+  padding:140px 70px;
+  background:
+    radial-gradient(80% 90% at 15% 40%, rgba(109,37,82,.85) 0%, rgba(67,29,133,.55) 38%, rgba(5,5,7,1) 70%),
+    radial-gradient(55% 55% at 85% 85%, rgba(123,44,255,.35) 0%, rgba(5,5,7,1) 65%),
+    #050507;
+}
+
+.faq-inner{
+  max-width:1050px;
+  margin:auto;
+}
+
+/* ================= TOP ================= */
+.faq-top{
+  display:grid;
+  grid-template-columns:340px 1fr;
+  gap:60px;
+  align-items:center;
+  margin-bottom:60px;
+}
+
+.faq-bubble{width:220px}
+.faq-bubble svg{width:100%}
+
+.faq-heading h1{
+  font-size:34px;
+  font-weight:600;
+  line-height:1.2;
+  color:var(--pink);
+}
+
+.faq-heading p{
+  margin-top:12px;
+  font-size:14px;
+  max-width:420px;
+  color:var(--text);
+}
+
+/* ================= ACCORDION ================= */
+.accordion{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.item{
+  background: linear-gradient(
+    180deg,
+    rgba(44, 16, 94, 0.35),
+    rgba(123,44,255,0.10)
+  );
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+}
+
+
+.item-header{
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+}
+
+.item-header h3{
+  font-size:13px;
+  font-weight:500;
+}
+
+.item-header span{
+  color:var(--pink);
+  font-size:18px;
+}
+
+.item-body{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+}
+
+.item-body p{
+  padding:0 22px 22px;
+  font-size:13px;
+  line-height:1.7;
+  color:var(--text);
+}
+
+.item.active .item-body{
+  max-height:300px;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:900px){
+  .faq{padding:120px 20px}
+  .faq-top{grid-template-columns:1fr}
+  .faq-heading h1{font-size:28px}
+}
+
+.down-footer{
+  background:
+    radial-gradient(80% 80% at 0% 0%, rgba(123,44,255,.25), transparent 55%),
+    linear-gradient(90deg,#140014,#3b1230);
+  padding:70px 60px 30px;
+  color:#cfd0e6;
+}
+
+.footer-inner{
+  max-width:1440px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2.2fr 2fr 1fr;
+  gap:60px;
+  align-items:flex-start;
+}
+
+/* LEFT */
+.footer-logo{
+  font-size:22px;
+  font-weight:700;
+  color:#ffffff;
+  margin-bottom:14px;
+}
+
+.footer-left p{
+  font-size:13px;
+  line-height:1.7;
+  color:#bfbfd4;
+  margin-bottom:18px;
+}
+
+.footer-left .copyright{
+  font-size:12px;
+  color:#9b9bb3;
+}
+
+/* CENTER */
+.footer-center{
+  display:grid;
+  grid-template-columns:repeat(3,auto);
+  gap:12px 40px;
+  margin-top:8px;
+}
+
+.footer-center a{
+  font-size:13px;
+  color:#cfd0e6;
+  text-decoration:none;
+}
+
+/* RIGHT */
+.footer-right{
+  display:flex;
+  gap:18px;
+  margin-top:6px;
+}
+
+.footer-right a{
+  font-size:13px;
+  color:#ffffff;
+  text-decoration:none;
+  opacity:.85;
+}
+
+/* BOTTOM */
+.footer-bottom{
+  max-width:1440px;
+  margin:30px auto 0;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.06);
+  display:flex;
+  justify-content:flex-end;
+  gap:24px;
+}
+
+.footer-bottom a{
+  font-size:12px;
+  color:#bfbfd4;
+  text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .down-footer{
+    padding:60px 20px 30px;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .footer-center{
+    grid-template-columns:repeat(2,auto);
+  }
+
+  .footer-right{
+    justify-content:flex-start;
+  }
+
+  .footer-bottom{
+    justify-content:flex-start;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<section class="faq">
+  <div class="faq-inner">
+
+    <!-- TOP -->
+    <div class="faq-top">
+      <div class="faq-bubble">
+        <svg viewBox="0 0 300 220">
+          <rect x="20" y="20" rx="26" ry="26" width="220" height="140" fill="#ff2db2"/>
+          <rect x="40" y="40" rx="26" ry="26" width="220" height="140" fill="#000"/>
+          <text x="150" y="115" text-anchor="middle" font-size="38" fill="#ff2db2" font-weight="700">FAQ</text>
+        </svg>
+      </div>
+
+      <div class="faq-heading">
+        <h1>Frequently<br>Asked Questions</h1>
+        <p>Non donec molestie purus pulvinar sollicitudin habitasse et diam at mi tristique</p>
+      </div>
+    </div>
+
+    <!-- ACCORDION (15 ITEMS) -->
+    <div class="accordion">
+
+      <!-- 1 -->
+      <div class="item active">
+        <div class="item-header"><h3>What is DOWN Dating App?</h3><span>−</span></div>
+        <div class="item-body"><p>DOWN is the most honest dating app letting users choose between DATE or DOWN.</p></div>
+      </div>
+
+      <!-- 2 -->
+      <div class="item">
+        <div class="item-header"><h3>How do I create an account?</h3><span>+</span></div>
+        <div class="item-body"><p>Create an account using phone number or Facebook.</p></div>
+      </div>
+
+      <!-- 3 -->
+      <div class="item"><div class="item-header"><h3>Is DOWN free to use?</h3><span>+</span></div><div class="item-body"><p>Yes, DOWN offers free and premium options.</p></div></div>
+
+      <!-- 4 -->
+      <div class="item"><div class="item-header"><h3>What is Get DATE?</h3><span>+</span></div><div class="item-body"><p>Get DATE is for meaningful relationships.</p></div></div>
+
+      <!-- 5 -->
+      <div class="item"><div class="item-header"><h3>What is Get DOWN?</h3><span>+</span></div><div class="item-body"><p>Get DOWN is for casual connections.</p></div></div>
+
+      <!-- 6 -->
+      <div class="item"><div class="item-header"><h3>Do I need to swipe left or right?</h3><span>+</span></div><div class="item-body"><p>No swiping — DOWN works on intentions.</p></div></div>
+
+      <!-- 7 -->
+      <div class="item"><div class="item-header"><h3>What is Snap Match?</h3><span>+</span></div><div class="item-body"><p>Snap Match connects you randomly worldwide.</p></div></div>
+
+      <!-- 8 -->
+      <div class="item"><div class="item-header"><h3>Is my profile private?</h3><span>+</span></div><div class="item-body"><p>Your profile is shown only to people you like.</p></div></div>
+
+      <!-- 9 -->
+      <div class="item"><div class="item-header"><h3>Can I block users?</h3><span>+</span></div><div class="item-body"><p>Yes, you can block or report users anytime.</p></div></div>
+
+      <!-- 10 -->
+      <div class="item"><div class="item-header"><h3>Is DOWN available worldwide?</h3><span>+</span></div><div class="item-body"><p>DOWN is available in multiple countries.</p></div></div>
+
+      <!-- 11 -->
+      <div class="item"><div class="item-header"><h3>Do matches expire?</h3><span>+</span></div><div class="item-body"><p>No, matches stay until you decide.</p></div></div>
+
+      <!-- 12 -->
+      <div class="item"><div class="item-header"><h3>Can I delete my account?</h3><span>+</span></div><div class="item-body"><p>Yes, account deletion is permanent.</p></div></div>
+
+      <!-- 13 -->
+      <div class="item"><div class="item-header"><h3>How do notifications work?</h3><span>+</span></div><div class="item-body"><p>You receive alerts for matches and messages.</p></div></div>
+
+      <!-- 14 -->
+      <div class="item"><div class="item-header"><h3>Is my data secure?</h3><span>+</span></div><div class="item-body"><p>We use industry-standard security practices.</p></div></div>
+
+      <!-- 15 -->
+      <div class="item"><div class="item-header"><h3>How can I contact support?</h3><span>+</span></div><div class="item-body"><p>Contact us via the app or website.</p></div></div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="down-footer">
+  <div class="footer-inner">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <div class="footer-logo">DOWN</div>
+      <p>
+        The honest dating app that puts YOU in control.<br>
+        We encourage users to be honest to form a real,<br>
+        trustworthy, and transparent connection.
+      </p>
+      <span class="copyright">
+        © 2022 Down. All Rights Reserved
+      </span>
+    </div>
+
+    <!-- CENTER LINKS -->
+    <div class="footer-center">
+      <a href="#">Home</a>
+      <a href="#">FAQ</a>
+      <a href="#">Dating Advice</a>
+      <a href="#">DOWN Wiki</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <!-- RIGHT SOCIAL -->
+    <div class="footer-right">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Twitter">t</a>
+      <a href="#" aria-label="Medium">M</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <a href="#">Privacy & Policy</a>
+    <a href="#">Terms</a>
+  </div>
+</footer>
+
+
+<script>
+document.querySelectorAll('.item-header').forEach(header=>{
+  header.addEventListener('click',()=>{
+    const item = header.parentElement;
+    const open = item.classList.contains('active');
+
+    document.querySelectorAll('.item').forEach(i=>{
+      i.classList.remove('active');
+      i.querySelector('span').textContent = '+';
+    });
+
+    if(!open){
+      item.classList.add('active');
+      header.querySelector('span').textContent = '−';
+    }
+  });
+});
+</script>
+
+</body>
+</html>

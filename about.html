@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOWN – Improved UI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top left, #4b1134 0%, transparent 40%),
+    radial-gradient(circle at bottom right, #2b0b1e 0%, transparent 40%),
+    #050005;
+  color:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+  padding:30px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:700;
+  letter-spacing:3px;
+}
+
+nav a{
+  color:#cfcfcf;
+  text-decoration:none;
+  margin-left:25px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+nav a:hover{ color:#ff3c9e; }
+
+/* ================= FIRST SECTION (HERO) ================= */
+.hero-section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.hero-section h1{
+  font-size:34px;
+  font-weight:700;
+  color:#ff4aa2;
+  margin-bottom:60px;
+}
+
+.hero-section .cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+  max-width:900px;
+  margin:auto;
+}
+
+.hero-section .card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.04)
+  );
+  border-radius:24px;
+  padding:40px 35px;
+  backdrop-filter:blur(14px);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  transition:0.4s ease;
+}
+
+.hero-section .card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 40px 80px rgba(255,60,158,0.25);
+}
+
+.hero-section .icon{
+  width:70px;
+  height:70px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#ff3c9e,#ff78bd);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:25px;
+}
+
+/* mission icon */
+.mission-icon span{
+  display:flex;
+  gap:10px;
+}
+.mission-icon span div{
+  width:12px;
+  height:12px;
+  background:#111;
+  border-radius:50%;
+}
+
+/* vision icon */
+.vision-icon::before{
+  content:"";
+  width:0;
+  height:0;
+  border-left:16px solid transparent;
+  border-right:16px solid transparent;
+  border-bottom:26px solid #111;
+  transform:rotate(90deg);
+}
+
+.hero-section h2{
+  font-size:22px;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+.hero-section p{
+  color:#d5d5d5;
+  font-size:15px;
+  line-height:1.7;
+}
+
+
+
+
+
+/* SECTION */
+.section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+/* HEADING */
+.section h1{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:50px;
+  color:#ff2fa0;
+}
+
+/* CARDS GRID */
+.cards{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap:24px;
+}
+
+/* CARD */
+.card{
+  padding:26px 22px;
+  border-radius:16px;
+  text-align:left;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 0 30px rgba(255,0,160,.35);
+  transition:transform .3s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+/* CARD COLORS */
+.card.private{
+  background:linear-gradient(135deg, #ff005f, #ff2fa0);
+}
+.card.authentic{
+  background:linear-gradient(135deg, #ff2fa0, #ff4dc4);
+}
+.card.transparent{
+  background:linear-gradient(135deg, #c61cff, #ff2fa0);
+}
+.card.global{
+  background:linear-gradient(135deg, #7b2ff7, #b721ff);
+}
+
+/* ICON */
+.icon{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  background:rgba(255,255,255,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  margin-bottom:18px;
+}
+
+/* TITLE */
+.card h3{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+/* TEXT */
+.card p{
+  font-size:14px;
+  line-height:1.6;
+  opacity:.95;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .section h1{
+    font-size:26px;
+  }
+}
+
+/* ============ PRESS (PIXEL-CLOSE CLONE) ============ */
+.press-exact{
+  padding:80px 20px 90px;
+  text-align:center;
+}
+
+/* heading */
+.press-heading{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin-bottom:26px;
+}
+
+.press-heading .title{
+  color:#ff3c9e;
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:.5px;
+}
+
+.press-heading .line{
+  width:26px;
+  height:1px;
+  background:#ff3c9e;
+  opacity:.7;
+}
+
+/* container */
+.press-container{
+  max-width:960px;
+  margin:0 auto;
+  padding:22px 34px;
+  border-radius:22px;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
+  );
+  backdrop-filter:blur(14px);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* rows */
+.press-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.press-row + .press-row{
+  margin-top:18px;
+}
+
+/* logos (text-styled to match image) */
+.press-row .logo{
+  color:#ffffff;
+  opacity:.9;
+  white-space:nowrap;
+}
+
+/* individual tuning */
+.mashable{ font-weight:700; font-size:15px; }
+.buzzfeed{ font-weight:700; font-size:15px; }
+.fastcompany{ font-weight:600; font-size:14px; letter-spacing:.5px; }
+.versus{ font-weight:600; font-size:15px; text-transform:lowercase; }
+
+.pando{ font-weight:700; font-size:14px; }
+.tc{ font-weight:700; font-size:15px; }
+.datingnews{ font-weight:500; font-size:14px; }
+.datingxp{ font-weight:600; font-size:14px; }
+.datingadvice{ font-weight:500; font-size:14px; }
+
+/* responsive (keeps visual feel) */
+@media(max-width:900px){
+  .press-row{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:22px;
+  }
+}
+
+
+/* Responsive */
+@media(max-width:900px){
+  .press-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:500px){
+  .press-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+.mashable{
+  font-weight:800;
+  font-size:15px;
+}
+
+.buzzfeed{
+  font-weight:800;
+  font-size:15px;
+}
+
+.fastcompany{
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.versus{
+  font-weight:700;
+  font-size:15px;
+  text-transform:lowercase;
+}
+
+.pando{
+  font-weight:800;
+  font-size:14px;
+}
+
+.tc{
+  font-weight:800;
+  font-size:15px;
+}
+
+.datingnews{
+  font-weight:600;
+  font-size:14px;
+}
+
+.datingxp{
+  font-weight:700;
+  font-size:14px;
+}
+
+.datingadvice{
+  font-weight:600;
+  font-size:14px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .section .cards{ grid-template-columns:repeat(2,1fr); }
+}
+
+@media(max-width:500px){
+  .section .cards{ grid-template-columns:1fr; }
+}
+
+@media(max-width:768px){
+  header{ padding:25px; }
+  nav{ display:none; }
+  .hero-section h1{ font-size:26px; }
+}
+
+/* ================= CONTACT SECTION ================= */
+.contact-section{
+  padding:100px 20px;
+}
+
+.contact-box{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:40px;
+  padding:45px;
+  border-radius:26px;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.10),
+    rgba(255,255,255,0.04)
+  );
+  backdrop-filter:blur(16px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* LEFT */
+.contact-left h2{
+  color:#ff3c9e;
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.contact-left p{
+  color:#d3d3d3;
+  font-size:14px;
+  line-height:1.6;
+  max-width:380px;
+  margin-bottom:10px;
+}
+
+.contact-left a{
+  color:#ff3c9e;
+  font-size:14px;
+  text-decoration:none;
+}
+
+.phone-mock{
+  margin-top:40px;
+}
+
+.phone-mock img{
+  width:260px;
+  transform:rotate(-15deg);
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,0.7));
+}
+
+/* RIGHT */
+.contact-right input,
+.contact-right textarea{
+  width:100%;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:10px;
+  padding:12px 14px;
+  color:#fff;
+  font-size:14px;
+  margin-bottom:15px;
+  outline:none;
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder{
+  color:#aaa;
+}
+
+.contact-right textarea{
+  resize:none;
+}
+
+/* CAPTCHA MOCK */
+.captcha-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff;
+  border-radius:4px;
+  padding:8px 10px;
+  font-size:12px;
+  color:#000;
+  margin-bottom:18px;
+}
+
+.captcha{
+  font-weight:600;
+}
+
+/* BUTTON */
+.contact-right button{
+  background:linear-gradient(135deg,#ff3c9e,#ff6fc2);
+  border:none;
+  color:#fff;
+  padding:12px 30px;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact-right button:hover{
+  opacity:0.85;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .contact-box{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .phone-mock img{
+    margin:auto;
+    transform:rotate(-10deg);
+  }
+}
+
+/* ================= FOOTER ================= */
+.down-footer{
+  background:
+    radial-gradient(circle at top left, #3a0a2a 0%, transparent 40%),
+    radial-gradient(circle at bottom right, #2a071d 0%, transparent 40%),
+    #050005;
+  padding:60px 20px;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  align-items:flex-start;
+}
+
+/* LEFT */
+.footer-logo{
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:3px;
+  margin-bottom:15px;
+}
+
+.footer-left p{
+  color:#cfcfcf;
+  font-size:14px;
+  line-height:1.6;
+  max-width:420px;
+}
+
+/* RIGHT */
+.footer-right{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.footer-links{
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.footer-links a{
+  color:#cfcfcf;
+  text-decoration:none;
+  font-size:13px;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#ff3c9e;
+}
+
+/* SOCIAL */
+.footer-social{
+  display:flex;
+  gap:16px;
+}
+
+.footer-social a{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-social a:hover{
+  background:#ff3c9e;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+
+  .footer-right{
+    align-items:flex-start;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DØWN</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">FAQ</a>
+    <a href="#">Dating Advice</a>
+    <a href="#">DOWN Wiki</a>
+    <a href="#">Careers</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<!-- FIRST SECTION -->
+<section class="hero-section">
+  <h1>Why You Need to Get DOWN</h1>
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon mission-icon">
+        <span><div></div><div></div></span>
+      </div>
+      <h2>Down’s Mission</h2>
+      <p>
+        To create a more progressive and healthy society where you can be
+        yourself and pursue what you desire, through refreshingly honest and
+        delightful experiences.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon vision-icon"></div>
+      <h2>Down’s Vision</h2>
+      <p>
+        Create more honest and exciting connections for app users in the U.S.
+        and beyond, with a progressive spirit and delightful experiences.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h1>WhatDOWN is All About</h1>
+
+  <div class="cards">
+
+    <div class="card private">
+      <div class="icon">🔒</div>
+      <h3>Private</h3>
+      <p>
+        Your safety is important to us. We make sure your DOWN App experience
+        is secure and honest.
+      </p>
+    </div>
+
+    <div class="card authentic">
+      <div class="icon">🎧</div>
+      <h3>Authentic</h3>
+      <p>
+        We focus on open minds, sexuality is healthy, natural, and crucial
+        aspect in relationships.
+      </p>
+    </div>
+
+    <div class="card transparent">
+      <div class="icon">❤️</div>
+      <h3>Transparent</h3>
+      <p>
+        We encourage users to be honest and real. Transparency and connection.
+      </p>
+    </div>
+
+    <div class="card global">
+      <div class="icon">🌍</div>
+      <h3>Global</h3>
+      <p>
+        Chat to new singles from all over the world!
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="press-exact">
+  <div class="press-heading">
+    <span class="line"></span>
+    <span class="title">Press</span>
+    <span class="line"></span>
+  </div>
+
+  <div class="press-container">
+    <div class="press-row">
+      <span class="logo mashable">Mashable</span>
+      <span class="logo buzzfeed">BuzzFeed</span>
+      <span class="logo fastcompany">FASTCOMPANY</span>
+      <span class="logo versus">versus</span>
+    </div>
+
+    <div class="press-row">
+      <span class="logo pando">PANDO</span>
+      <span class="logo tc">TC</span>
+      <span class="logo datingnews">DatingNews</span>
+      <span class="logo datingxp">datingXP</span>
+      <span class="logo datingadvice">DatingAdvice</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="contact-box">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+      <h2>Contact Us</h2>
+      <p>
+        If you have any issues or questions, please let us know from this form or by email.
+        We'd love to help!
+      </p>
+      <a href="mailto:contact@downapp.com">contact@downapp.com</a>
+
+      <div class="phone-mock">
+        <img src="./Frame 94 (1).png" alt="App Preview">
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-right">
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" rows="5" required></textarea>
+
+        <div class="captcha-row">
+          <label>
+            <input type="checkbox"> I'm not a robot
+          </label>
+          <span class="captcha">reCAPTCHA</span>
+        </div>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="down-footer">
+  <div class="footer-inner">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <div class="footer-logo">DØWN</div>
+      <p>
+        The honest dating app that puts YOU in control.
+        <br>
+        We encourage users to be honest to form real,
+        trustworthy, and transparent connections.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Dating Advice</a></li>
+        <li><a href="#">DOWN Wiki</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Medium">M</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+</body>
+</html>
