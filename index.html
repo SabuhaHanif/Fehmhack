@@ -1,89 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instagram Stories Widget</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-    body{background:#fff;color:#111}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DOWN Landing</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0b0014;color:#fff}
 
-    /* NAVBAR */
-    header{display:flex;align-items:center;justify-content:space-between;padding:20px 80px;border-bottom:1px solid #eee}
-    .logo{font-weight:700;font-size:18px}
-    nav a{margin:0 15px;text-decoration:none;color:#555;font-weight:500}
-    .nav-btn{padding:10px 18px;border-radius:8px;background:#2563eb;color:#fff;border:none;font-weight:600;cursor:pointer}
+/* HEADER TAG */
+.update-tag{max-width:1200px;margin:30px auto 10px;padding:14px 26px;border-radius:14px;background:linear-gradient(90deg,#ff3cac,#784ba0,#2b86c5);display:inline-block;font-weight:600}
 
-    /* HERO */
-    .hero{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;padding:80px;gap:60px}
-    .hero h1{font-size:42px;line-height:1.2;font-weight:700}
-    .hero h1 span{color:#2563eb}
-    .hero p{margin-top:18px;color:#555;font-size:16px;max-width:480px}
+/* HERO */
+.hero{max-width:1200px;margin:0 auto;padding:60px 20px;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
 
-    .hero-actions{margin-top:30px;display:flex;gap:15px}
-    .btn-primary{background:#2563eb;color:#fff;padding:14px 26px;border:none;border-radius:10px;font-weight:600;cursor:pointer}
-    .btn-secondary{background:#f1f5f9;color:#111;padding:14px 26px;border:none;border-radius:10px;font-weight:600;cursor:pointer}
+.hero h1{font-size:48px;font-weight:700}
+.hero h1 span{color:#ff3cac}
+.hero p{margin-top:20px;color:#d1c4e9;max-width:480px}
 
-    /* MOCKUP */
-    .mockup{display:flex;justify-content:center}
-    .phone{width:260px;border-radius:32px;padding:14px;background:#000;box-shadow:0 25px 60px rgba(0,0,0,.25)}
-    .screen{background:#fff;border-radius:24px;padding:12px}
-    .story{border-radius:16px;overflow:hidden;margin-bottom:10px}
-    .story img{width:100%;display:block}
+.stats{display:flex;gap:40px;margin-top:40px}
+.stat h3{color:#ff3cac;font-size:22px}
+.stat p{font-size:13px;color:#aaa}
 
-    /* LOGOS */
-    .logos{display:flex;justify-content:center;gap:40px;padding:40px 80px;border-top:1px solid #eee;color:#999;font-weight:600}
+/* PHONE */
+.phone-wrap{display:flex;justify-content:center}
+.phone{width:280px;background:#000;border-radius:40px;padding:16px;box-shadow:0 30px 80px rgba(255,60,172,.4)}
+.phone-screen{background:linear-gradient(180deg,#2b0033,#000);border-radius:30px;padding:14px}
+.story-img{width:100%;border-radius:22px}
 
-    @media(max-width:900px){
-      header{padding:20px}
-      .hero{grid-template-columns:1fr;padding:40px;text-align:center}
-      .hero-actions{justify-content:center}
-    }
-  </style>
+/* FEATURES */
+.features{max-width:1200px;margin:80px auto;padding:0 20px}
+.features h2{text-align:center;font-size:32px;margin-bottom:50px}
+
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature{background:#14001f;padding:24px;border-radius:18px}
+.feature h4{margin-top:14px;color:#ff3cac}
+.feature p{font-size:13px;color:#bbb;margin-top:10px}
+
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;text-align:center}
+.stats{justify-content:center;flex-wrap:wrap}
+.feature-grid{grid-template-columns:1fr 1fr}
+}
+</style>
 </head>
 <body>
 
-<header>
-  <div class="logo">EmbedStories</div>
-  <nav>
-    <a href="#">Features</a>
-    <a href="#">Templates</a>
-    <a href="#">Pricing</a>
-    <a href="#">Blog</a>
-  </nav>
-  <button class="nav-btn">Get Started</button>
-</header>
+<div class="update-tag">Update&nbsp;&nbsp;28.02.2022</div>
 
 <section class="hero">
   <div>
-    <h1>Display Instagram Stories<br>on <span>any website</span>, in seconds.</h1>
-    <p>Automatically sync Instagram stories and display them on your website with a simple embed. No coding required.</p>
+    <h1>Date On<br><span>Easy Mode</span></h1>
+    <p>The dating app designed to be deleted. Match, chat, meet – without pressure.</p>
 
-    <div class="hero-actions">
-      <button class="btn-primary">Start free trial</button>
-      <button class="btn-secondary">View demo</button>
+    <div class="stats">
+      <div class="stat"><h3>10,000,000</h3><p>Downloads</p></div>
+      <div class="stat"><h3>13,000</h3><p>Daily Matches</p></div>
+      <div class="stat"><h3>136</h3><p>Countries</p></div>
     </div>
   </div>
 
-  <div class="mockup">
+  <div class="phone-wrap">
     <div class="phone">
-      <div class="screen">
-        <div class="story"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"/></div>
-        <div class="story"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"/></div>
-        <div class="story"><img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"/></div>
+      <div class="phone-screen">
+        <img class="story-img" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" />
       </div>
     </div>
   </div>
 </section>
 
-<div class="logos">
-  <span>CHILL</span>
-  <span>Maison</span>
-  <span>Florence</span>
-  <span>Cosmetics</span>
-  <span>Shopify</span>
-</div>
+<section class="features">
+  <h2>What DOWN is All About</h2>
+  <div class="feature-grid">
+    <div class="feature"><h4>Private</h4><p>Your profile is only shown to people you like.</p></div>
+    <div class="feature"><h4>Authentic</h4><p>Real people with real intentions.</p></div>
+    <div class="feature"><h4>Transparent</h4><p>No fake likes or hidden algorithms.</p></div>
+    <div class="feature"><h4>Global</h4><p>Meet people from anywhere in the world.</p></div>
+  </div>
+</section>
 
 </body>
 </html>
